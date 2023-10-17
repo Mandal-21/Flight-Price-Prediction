@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flight Price Prediction</title>
-
+    
 
     <!-- BootStrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
@@ -12,7 +12,79 @@
 
 
     <!-- css -->
-    <link rel="stylesheet" href="static/css/styles.css">
+    <style>
+        body {
+            background-color: #272626;
+            text-align: center;
+            background-image:url('/static/cash.jpg');
+            background-blend-mode:overlay;
+        }
+        
+        .navbar {
+            background-color: #ffffff;
+        }
+        
+        a {
+            color: #000000;
+            font-size:xx-large;
+            font-weight:1000 ;
+        }
+        
+        a:hover {
+            color: #d39797;
+          }
+        
+        .container {
+            background-image: url('/static/plane.jpg');
+            background-size: cover; 
+            padding: 20px; 
+            border: 1px solid #000000;
+            border-radius:10px;
+            background-color: rgba(0, 0, 0, 0.34);
+            background-blend-mode: overlay;
+                /* Add a box shadow for the 3D effect */
+                box-shadow: 10px 10px 20px rgba(255, 255, 255, 0.3);
+                transform: perspective(1000px) rotateX(0);
+        }
+        
+        .navbar-brand {
+            font-size: 24px; 
+        }
+        .container .col-sm-6:nth-child(1) .card {
+            background-color: #70707071; 
+            border: 1px solid #fefefe; 
+        }
+        
+        
+        
+        input[type="submit"] {
+            --width: 150px;
+            --timing: 2s;
+            border: 0;
+            width: var(--width);
+            padding-block: 1em;
+            color: #fff;
+            font-weight: bold;
+            font-size: 1em;
+            background: rgb(64, 192, 87);
+            transition: all 0.2s;
+            border-radius: 3px;
+            background-image: linear-gradient(to right, rgb(250, 82, 82), rgb(250, 82, 82) 16.65%, rgb(190, 75, 219) 16.65%, rgb(190, 75, 219) 33.3%, rgb(76, 110, 245) 33.3%, rgb(76, 110, 245) 49.95%, rgb(64, 192, 87) 49.95%, rgb(64, 192, 87) 66.6%, rgb(250, 176, 5) 66.6%, rgb(250, 176, 5) 83.25%, rgb(253, 126, 20) 83.25%, rgb(253, 126, 20) 100%, rgb(250, 82, 82) 100%);
+        }
+        
+        input[type="submit"]:hover {
+            animation: var(--timing) linear dance6123 infinite;
+            transform: scale(1.1) translateY(-1px);
+        }
+        
+        @keyframes dance6123 {
+            to {
+                background-position: var(--width);
+            }
+        }
+        
+        
+    </style>
 
 
 </head>
@@ -34,8 +106,7 @@
     <div class="container">
 
 
-
-        <form action="\predict" method="post">
+        <form action="/" method="POST">
 
 
             <div class="row">
@@ -160,11 +231,8 @@
 
         <br>
         <br>
-        <p>©2020 Amar Mandal</p>
 
     </div>
-
-
 
 
     <!-- JavaScript -->
